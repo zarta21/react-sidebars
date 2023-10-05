@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+    }
+
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - .5rem));
+        }
+    }
+
+    h1 {
+        width: 20ch;
+        animation: typing 3s steps(20);
+        white-space: nowrap;
+        overflow: hidden;
+
+    }
+
+    .scroller {
+        max-width: 600px;
+
+        .items-list {
+            margin: 0;
+            padding-inline: 0;
+            list-style: none;
+
+            li {
+                padding: 1rem;
+                font-size: 2rem;
+
+                &:hover {
+                    scale: 1.8;
+                    color: #1877F2;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .scroller-elements {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding-block: 1rem;
+        }
+
+        &[data-animated=true] {
+            overflow: hidden;
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+
+            .scroller-elements {
+                width: max-content;
+                flex-wrap: nowrap;
+                animation: scroll 40s forwards linear infinite;
+
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
+        }
+    }
+}
+
