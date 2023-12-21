@@ -1,0 +1,122 @@
+.youtube-sidebar {
+    background-color: #151515;
+    color: #fff;
+
+    svg {
+        fill: #fff;
+    }
+    .navbar {
+        position: absolute;        
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 0;
+        background-color: #151515;
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: .5rem;
+            width: 30%;
+            margin: 0;
+            padding-left: 1rem;
+
+            .menu-btn {
+                display: flex;
+                align-items: center;
+                padding: .5rem;
+                border-radius: 50%;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #272727;
+                }
+                
+                svg {
+                    fill: #fff;
+                }
+            }
+
+            .logo{
+                width: 4rem;
+                height: 4rem;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+        
+
+    }
+
+    .sidebar {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 10rem;
+        height: 100%;
+        padding: 0 1rem;
+        margin-top: 3rem;
+
+
+        .sidebar-items {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            margin: .5rem 1rem;
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid #3f3f3f;
+            }
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: .7rem;
+                width: 100%;
+                font-size: .75rem;
+                font-weight: 600;
+                border-radius: .5rem;
+                padding: .5rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #3d3d3d;
+                }
+            }
+
+            .title {
+                margin-bottom: .4rem;
+
+                span {
+                    font-size: .8rem;
+                    font-weight: 600;
+                    padding: .5rem;
+                }
+            }
+
+            .sidebar-two {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                width: 30%;
+                left: 0;
+                margin: 0;
+                font-size: .5rem;
+                visibility: visible;
+
+            }
+        }
+    }
+
+    .visible {
+        visibility: hidden;
+    }
+}
